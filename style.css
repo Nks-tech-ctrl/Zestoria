@@ -859,4 +859,77 @@ textarea {
         padding: 12px 24px;
         margin: 15px;
     }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card img {
+        height: 200px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card:last-child {
+        grid-column: auto;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card:last-child {
+        grid-column: auto;
+    }
+
+    .gallery-grid{
+        grid-template-columns: 1fr;
+    }
+     .contact-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .reservation-form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .copyright {
+        grid-column: 1;
+        text-align: center;
+    }
 }
