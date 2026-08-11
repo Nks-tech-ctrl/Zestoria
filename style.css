@@ -799,4 +799,35 @@ textarea {
     gap: 1rem;
     border-radius: 15px;
   }
+
+  .hero{
+    padding: 40px 0;
+  }
+
+  .hero-text h1{
+    font-size: 35px;
+    line-height: 2.5rem;
+  }
+
+  .hero-text p{
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+
+  .hero-buttons{
+    gap: 1rem;
+  }
+  .hero-stats{
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .stats h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .stats p{
+    font-size: 14px;
+    line-height: 1.3rem;
+  }
 }
