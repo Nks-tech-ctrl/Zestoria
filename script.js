@@ -29,5 +29,7 @@ reservationForm.addEventListener("submit", (event) => {
         alert("Please fill details to book table");
         return;
     }
+    alert("Table Booked successfully")
+    reservationForm.reset();
 });
 
