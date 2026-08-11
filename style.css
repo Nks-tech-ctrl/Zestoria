@@ -84,6 +84,10 @@ a {
     transition: .3s;
 }
 
+nav ul .book-btn{
+    display: inline;
+}
+
 .book-btn:hover {
     background-color: #A55B3F;
     transform: scale(1.05);
@@ -763,7 +767,36 @@ textarea {
     
     
 }
+.hamburger{
+    display: none;
+    background:none;
+    border: none;
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+}
 
 @media (max-width:480px){
-    
+  nav ul{
+    display: none;
+  }
+  
+  .hamburger{
+    display: block;
+  }
+  nav{
+    position: relative;
+  }
+
+  nav ul.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: var(--primary);
+    padding: 20px;
+    gap: 1rem;
+    border-radius: 15px;
+  }
 }
