@@ -33,7 +33,30 @@ reservationForm.addEventListener("submit", (event) => {
         alert("Please Enter Valid number");
         return;
     }
+    if(!/^\d+$/.test(phone)){
+        alert("phone no must be digits.");
+        return;
+    }
+
+    if (guests < 1 || guests >10) {
+        alert("Number of guests be in between 1 to 10");
+        return;
+    }
+    
+    const today = new Date();
+    const selectedDAte = new Date(date);
+    if (selectedDAte < today) {
+        alert("Please select future or today date");
+        return;
+    }
+
+    if (time <"11:00" || time >"22:00") {
+        alert("please select time between 11:00 Am and 10:00 Pm");
+        return;
+    }
     alert("Table Booked successfully")
     reservationForm.reset();
 });
+
+
 
