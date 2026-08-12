@@ -29,6 +29,10 @@ reservationForm.addEventListener("submit", (event) => {
         alert("Please fill details to book table");
         return;
     }
+    if(phone.length !=10){
+        alert("Please Enter Valid number");
+        return;
+    }
     alert("Table Booked successfully")
     reservationForm.reset();
 });
