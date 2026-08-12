@@ -1,4 +1,3 @@
-console.log("working");
 const hamburger = document.querySelector("#hamburger");
 const navlinks = document.querySelector("nav ul");
 
@@ -25,10 +24,10 @@ const reservationForm = document.querySelector("#reservation-form");
 console.log(reservationForm);
 reservationForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log("form submitted");
+    
 
     const userName = document.querySelector("#name").value.trim();
-    const guests = document.querySelector("#guests").value;
+    const guests = Number(document.querySelector("#guests").value);
     const phone = document.querySelector("#phone").value.trim();
     const date = document.querySelector("#date").value;
     const time = document.querySelector("#time").value;
@@ -37,7 +36,7 @@ reservationForm.addEventListener("submit", (event) => {
         alert("Please fill details to book table");
         return;
     }
-    if (phone.length != 10) {
+    if (phone.length !== 10) {
         alert("Please Enter Valid number");
         return;
     }
@@ -52,6 +51,7 @@ reservationForm.addEventListener("submit", (event) => {
     }
 
     const today = new Date();
+    today.setHours(0,0,0,0);
     const selectedDAte = new Date(date);
     if (selectedDAte < today) {
         alert("Please select future or today date");
@@ -82,7 +82,7 @@ exploreMenu.addEventListener("click",()=>{
 });
 
 const navbookbtn = document.querySelector("#nav-book-btn");
-navbookbtn.addEventListener("click",()=>{
+navbookbtn.addEventListener("click",(event)=>{
     event.preventDefault();
     document.querySelector("#reservation-form").scrollIntoView({
         behavior:"smooth"
